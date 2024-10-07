@@ -154,5 +154,22 @@ public class CarvedMaze extends Maze
     private void carveMazeUsingStack(Cell start, Cell end)
     {
         //student implementation
+        ArrayList<Cell> stack = new ArrayList<>();
+        
+        stack.add(start);
+        carve(null, start);
+        
+        while(stack.isEmpty() == false){
+            Cell current = stack.get(stack.size() - 1);
+            Cell next = randomUncarvedNeighbor(current);
+            
+            if (next != null){
+                carve(current, next);
+                stack.add(next);
+            }
+            else{
+                stack.remove(stack.size() - 1);
+            }
+        }
     }
 }
