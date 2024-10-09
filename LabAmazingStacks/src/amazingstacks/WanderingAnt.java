@@ -167,7 +167,7 @@ public class WanderingAnt
     }
     
     /**
-     * Tells this ant that it has picked up food.
+     * Tells this ant that it has ed up food.
      */
     public void pickUpFood()
     {

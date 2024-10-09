@@ -24,7 +24,7 @@ public class WandererSimulation extends AnimationComponent
     
     public static final double DROP_FOOD_PROB = 0.05;
     
-    private WanderingAnt ant;
+    private BacktrackingAnt ant;
     private Cell foodLocation;
     private Cell nestLocation;
     
@@ -32,7 +32,7 @@ public class WandererSimulation extends AnimationComponent
     {
         nestLocation = new Cell(120,120);
         
-        ant = new WanderingAnt(nestLocation);
+        ant = new BacktrackingAnt(nestLocation);
         foodLocation = ant.getLocation();
         ant.pickUpFood();
         
