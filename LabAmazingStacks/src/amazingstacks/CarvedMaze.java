@@ -157,7 +157,7 @@ public class CarvedMaze extends Maze
        
        s.push(start);
        
-       while(!s.isEmpty()){
+       while(!s.peek().equals(end)){
           if(randomUncarvedNeighbor(s.peek()) != null){
               Cell n = randomUncarvedNeighbor(s.peek());
               carve(s.peek(), n);
